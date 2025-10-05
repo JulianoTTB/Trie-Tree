@@ -70,4 +70,8 @@ public class No {
     public void setLetra(char letra){
         this.letra = letra;
     }
+
+    public void setUltimoLetra(boolean ultimoLetra){
+        this.ultimoLetra = ultimoLetra;
+    }
 }
