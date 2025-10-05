@@ -70,4 +70,8 @@ public class ArvoreTrie {
         return false;
     }
 
+    public void removerPalavra(String palavra){
+        removePalavra(raiz, palavra, 0);
+    }
+
 }
