@@ -19,7 +19,7 @@ public class No {
         return this.tamanho == 0;
     }
 
-    public boolean eUltimoLetra(){
+    public boolean eUltimaLetra(){
         return this.ultimoLetra;
     }
 
