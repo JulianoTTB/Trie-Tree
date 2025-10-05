@@ -33,7 +33,7 @@ public class ArvoreTrie {
             if (filho != null) {
                 atual = filho;
             } else {
-                System.out.println("A palavra não existe!");
+                System.out.println("A palavra não está na árvore!");
                 return;
             }
         }
