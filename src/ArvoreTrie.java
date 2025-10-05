@@ -37,7 +37,7 @@ public class ArvoreTrie {
                 return;
             }
         }
-        if (atual.eUltimoLetra()) {
+        if (atual.eUltimaLetra()) {
             System.out.println("A palavra está na árvore!");
         } else {
             System.out.println("A palavra não está na árvore!");
@@ -46,7 +46,7 @@ public class ArvoreTrie {
 
     public boolean removePalavra(No atual, String palavra, int posLetra){
         if (posLetra == palavra.length()){
-            if(!atual.eUltimoLetra()){
+            if(!atual.eUltimaLetra()){
                 return false;
             }
             atual.setUltimoLetra(false);
@@ -64,7 +64,7 @@ public class ArvoreTrie {
 
         if(apagarFilho){
             atual.remover(letra);
-            return !atual.eUltimoLetra() && atual.semFilhos();
+            return !atual.eUltimaLetra() && atual.semFilhos();
         }
 
         return false;
