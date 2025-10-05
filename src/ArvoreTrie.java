@@ -5,6 +5,26 @@ public class ArvoreTrie {
 
     }
 
+    public void inserir(String palavra){
+        No atual = this.raiz;
+        palavra = palavra.toLowerCase();
+        int tamanho = palavra.length();
+        for(int i = 0; i < tamanho; i++) {
+            char letra = palavra.charAt(i);
+            No novo_no = new No(letra, i == tamanho -1);
+            No existe = atual.buscar(letra);
+
+            if(existe != null){
+                atual = existe;
+            }
+            else{
+                atual.inserirFilho(novo_no);
+                atual = novo_no;
+            }
+        }
+    }
+
+
     public void busca(String palavra) {
         No atual = raiz;
         for (int i = 0; i < palavra.length(); i++) {
